@@ -1,0 +1,17 @@
+@using Restaurant.Models;
+@model Customer;
+
+@{
+    ViewData["Title"] = @Model.Name;
+}
+
+<h1>Customer number @Model.Id: @Model.Name</h1>
+<h2>Past orders:</h2>
+<ul>
+    @{
+        foreach (var order in Model.PastOrders)
+        {
+            <li>@order</li>
+        }
+    }
+</ul>

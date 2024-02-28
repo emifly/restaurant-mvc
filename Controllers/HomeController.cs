@@ -4,6 +4,7 @@ using Restaurant.Models;
 
 namespace Restaurant.Controllers;
 
+// One controller (waiter/waitress) covers one broad category of food
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
@@ -13,11 +14,13 @@ public class HomeController : Controller
         _logger = logger;
     }
 
+    // This is like one dish on the menu (happens to be the default recommendation)
     public IActionResult Index()
     {
         return View();
     }
 
+    // This is like another dish on the menu
     public IActionResult Privacy()
     {
         return View();

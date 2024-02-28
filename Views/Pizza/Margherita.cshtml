@@ -1,0 +1,18 @@
+@using Restaurant.Models;
+@model PizzaPlate;
+
+@{
+    ViewData["Title"] = "Margherita";
+}
+
+<div>
+    <p>Here is your @Model.Name. Enjoy!</p>
+    <ul>
+        @{
+            foreach (var ingredient in Model.Ingredients)
+            {
+                <li>@ingredient</li>
+            }
+        }
+    </ul>
+</div>
